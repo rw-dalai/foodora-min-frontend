@@ -1,0 +1,17 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Spenger Pizza",
+      "address": { "street": "Spengergasse 1", "postalCode": "1050", "city": "Wien" }
+    }
+  ],
+  "menu-items": [
+    { "id": 1, "name": "Margherita", "price": 8.90, "description": "Classic tomato sauce, mozzarella, fresh basil", "image": "/images/margherita.jpg", "restaurantId": 1 },
+    { "id": 2, "name": "Salami", "price": 10.40, "description": "Spicy Italian salami, mozzarella, tomato sauce", "image": "/images/salami.jpg", "restaurantId": 1 },
+    { "id": 3, "name": "Funghi", "price": 11.20, "description": "Mixed mushrooms, garlic, mozzarella, truffle oil", "image": "/images/funghi.jpg", "restaurantId": 1 },
+    { "id": 4, "name": "Quattro Formaggi", "price": 13.00, "description": "Mozzarella, gorgonzola, parmesan, fontina", "image": "/images/quattro-formaggi.jpg", "restaurantId": 1 },
+    { "id": 5, "name": "Diavola", "price": 11.90, "description": "Spicy nduja, fresh chilli, mozzarella", "image": "/images/diavola.jpg", "restaurantId": 1 },
+    { "id": 6, "name": "Prosciutto", "price": 12.50, "description": "Parma ham, arugula, parmesan shavings", "image": "/images/prosciutto.jpg", "restaurantId": 1 }
+  ]
+}
