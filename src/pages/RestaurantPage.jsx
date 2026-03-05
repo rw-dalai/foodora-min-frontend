@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { getMenuItems } from "@/api/restaurants"
-import { Skeleton } from "@/components/ui/skeleton"
 import MenuItemCard from "@/components/MenuItemCard"
 
 function RestaurantPage() {
@@ -25,11 +24,7 @@ function RestaurantPage() {
       </div>
 
       {loading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <Skeleton key={i} className="h-32 rounded-xl" />
-          ))}
-        </div>
+        <p className="text-muted-foreground">Laden...</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {menuItems.map((item) => (

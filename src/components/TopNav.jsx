@@ -1,5 +1,5 @@
-import { SidebarTrigger } from "@/components/ui/sidebar"
-import { Separator } from "@/components/ui/separator"
+import { Link } from "react-router"
+import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import {
@@ -8,15 +8,20 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
-import { Search, User } from "lucide-react"
+import { Search, User, UtensilsCrossed, PanelLeft } from "lucide-react"
 
-function TopNav() {
+function TopNav({ onToggleSidebar }) {
   return (
     <header className="flex h-20 items-center justify-between border-b px-6 gap-4">
-      {/* Left: hamburger + separator */}
+      {/* Left: toggle button + mobile logo */}
       <div className="flex items-center gap-3">
-        <SidebarTrigger className="-ml-1 size-10 [&_svg]:!size-6" />
-        <Separator orientation="vertical" className="h-8" />
+        <Button variant="ghost" size="icon" onClick={onToggleSidebar}>
+          <PanelLeft className="size-5" />
+        </Button>
+        <Link to="/" className="flex items-center gap-2 font-bold text-lg md:hidden">
+          <UtensilsCrossed className="size-5" />
+          SpengerBite
+        </Link>
       </div>
 
       {/* Center: search (hidden on small screens) */}
